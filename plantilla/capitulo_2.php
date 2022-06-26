@@ -122,7 +122,7 @@ if (!isset($_SESSION)) {
                                         <p>Tema: Evolución del software educativo</p>
                                         <p>Tipo: Relacionar</p>
                                         <p>Indicaciones: Relacione el año de evolución con su respectivo nombre</p>
-                                        <p>Link de Acceso: <a target="_blank" href="https://es.educaplay.com/recursos-educativos/12398668-evolucion_del_software.html">Relacionar Palabras</a></p>
+                                       <p>Link de Acceso: <a target="_blank" href="../capitulo2/Relacionar_fechas_conceptos/Relacionar_fechas_conceptos.htm">Relacionar Palabras</a></p>
                                         <p>Fecha Inicio: 07/07/2022</p>
                                         <p>Fecha Fin: 12/07/2022</p>
                                         <p>Tiempo: 15 minutos</p>

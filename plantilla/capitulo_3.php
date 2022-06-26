@@ -105,8 +105,7 @@ if (!isset($_SESSION)) {
                                     <div class="card-body">Material Extra</div>
                                     <div class="card-footer">
                                         <p>En los siguientes videos, encontrará la introduccion al diseño de software y los pasos de como deberiamois hacerlo.</p>
-                                        <p><link rel="stylesheet" type="text/css" href="">
-                                            <a target="_blank" href="https://www.youtube.com/watch?v=az2mP_AVgV0">Diseño de software educativo</a>
+                                        <p><a target="_blank" href="../capitulo2/Sopaletras/Sopaletras.htm">Diseño de software educativo</a>
                                         </p>
                                         <p><a target="_blank" href="https://www.youtube.com/watch?v=tKJeEXwZ1QA&ab_channel=CatchExceptionCanal">Introducción al diseño de softwareo</a></p>
                                     </div>
@@ -119,7 +118,7 @@ if (!isset($_SESSION)) {
                                         <p>Tema: Diseño del Software Educativo</p>
                                         <p>Tipo: Sopa de Letras</p>
                                         <p>Indicaciones: Buscar las palabras.</p>
-                                        <p>Link de Acceso: <a target="_blank" href="https://es.educaplay.com/recursos-educativos/12399100-caracteristicas_de_diseno.html">Sopa de letras</a></p>
+                                        <p>Link de Acceso: <a target="_blank" href="../capitulo3/Sopaletras/Sopaletras.htm">Sopa de letras</a></p>
                                         <p>Fecha Inicio: 13/07/2022</p>
                                         <p>Fecha Fin: 15/07/2022</p>
                                         <p>Tiempo: 15 minutos</p>
