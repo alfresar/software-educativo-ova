@@ -1,3 +1,12 @@
+<?php 
+if (!isset($_SESSION)) {
+  session_start(); 
+  
+   require('sesion.php');
+      
+  if ($c > 0) {
+      $id_usuario= $_SESSION['id_usuario']; 
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -28,7 +37,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="index.html">Salir</a></li>
+                        <li><a class="dropdown-item" href="cerrar_sesion.php">Salir</a></li>
                     </ul>
                 </li>
             </ul>
@@ -38,11 +47,11 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <a class="nav-link" href="app.html">
+                            <a class="nav-link" href="app.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-house"></i></div>
                                 Inicio
                             </a>
-                            <a class="nav-link active" href="progreso.html">
+                            <a class="nav-link active" href="progreso.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Progreso
                             </a>
@@ -53,12 +62,7 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="capitulo.html?cap=1">Capitulo 1</a>
-                                    <a class="nav-link" href="capitulo.html?cap=2">Capitulo 2</a>
-                                    <a class="nav-link" href="capitulo.html?cap=3">Capitulo 3</a>
-                                    <a class="nav-link" href="capitulo.html?cap=4">Capitulo 4</a>
-                                    <a class="nav-link" href="capitulo.html?cap=5">Capitulo 5</a>
-                                    <a class="nav-link" href="capitulo.html?cap=6">Capitulo 6</a>
+                                    <?php require("navegar.php"); ?>
                                 </nav>
                             </div>
                         </div>
@@ -68,20 +72,61 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Capitulo ###</h1>
+                        <h1 class="mt-4">Capitulo #1 Introducción a software educativo</h1>
                         <div class="card mb-4">
                             <div class="card-body">
                                 A continuación podrá visualizar el contenido del capitulo.
                             </div>
-                            <div class="card-footer">
-                                <iframe src="/capitulo5/ova_quiz.htm" width="100%" height="450" style="border:1px solid black;">
-                                </iframe>
+                        </div>    
+                            <div class="row">
+                            <div class="col-md-4">
+                                <div class="card mb-4">
+                                    <div class="card-body">Introduccion</div>
+                                    <div class="card-footer">
+                                        <p>Hoy en día la tecnología ha invadido prácticamente todos los sectores y la educación no podría quedarse atrás. ¿Sabías que existen software educativos que pueden utilizarse en todos los niveles para facilitar el aprendizaje y hacerlo más eficaz?</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-footer">
-                                <iframe src="/capitulo6/ova_herramientas.htm" width="100%" height="450" style="border:1px solid black;">
-                                </iframe>
+                            <div class="col-md-4">
+                                <div class="card mb-4">
+                                    <div class="card-body">¿Qué es un software educativo?</div>
+                                    <div class="card-footer">
+                                       <ul>
+                                        <p><li>Es un medio pedagógico que tiene como objetivo principal facilitar el proceso tanto de enseñanza como de aprendizaje.</li>
+
+                                        <li>Es un programa de computación que a través de una plataforma digital colabora con el proceso facilitando la adquisición de conocimientos.</li>
+
+                                        <li>Con ellos, cualquier alumno puede afianzar sus conocimientos en las más diversas áreas.</li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div class="col-md-4">
+                                <div class="card mb-4">
+                                    <div class="card-body">Material Extra</div>
+                                    <div class="card-footer">
+                                        <p>En el siguiente video, encontrará un resumen de los antecedentes del software educativo.</p>
+                                        <p><link rel="stylesheet" type="text/css" href="">
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=MzaM-Adl0rU">Concepto de Tecnología Educativa</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card mb-4">
+                                    <div class="card-body">Actividad</div>
+                                    <div class="card-footer">
+                                        <p>Tema: Introducción a software educativo</p>
+                                        <p>Tipo: Completar</p>
+                                        <p>Indicaciones: Completar con las palabras mostradas las frases que apareceran</p>
+                                        <p>Link de Acceso: <a target="_blank" href="#">Completar</a></p>
+                                        <p>Fecha Inicio: 04/07/2022</p>
+                                        <p>Fecha Fin: 06/07/2022</p>
+                                        <p>Tiempo: 15 minutos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                    
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -97,3 +142,15 @@
         <script src="js/scripts_app.js"></script>
     </body>
 </html>
+<?php  }
+
+  else{
+  
+header('location:login.php');
+
+  }
+      
+}
+
+
+?>  

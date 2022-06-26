@@ -23,8 +23,8 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca de</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="login.html">Login</a></li>
-                        <li class="nav-item"><a class="nav-link " href="registro.html">Registro</a></li>
+                        <li class="nav-item"><a class="nav-link " href="login.php">Login</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="registro.php">Registro</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,22 +36,30 @@
                     <div id="login-row" class="row justify-content-center align-items-center">
                         <div id="login-column" class="col-md-6">
                             <div id="login-box" class="col-md-12">
-                                <form id="login-form" class="form" action="app.html" method="get">
-                                    <h3 class="text-center">Iniciar sesión</h3>
+                                <form id="login-form" class="form" action="form/insertar/insertar_usuario.php" method="POST">
+                                    <h3 class="text-center">Nueva Cuenta</h3>
                                     <div class="form-group">
-                                        <label for="username">Usuario:</label><br>
-                                        <input type="text" name="username" id="username" class="form-control">
+                                        <label for="name">Nombre:</label><br>
+                                        <input type="text" name="nombres" id="nombres" class="form-control" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="password">Contraseña:</label><br>
-                                        <input type="text" name="password" id="password" class="form-control">
+                                        <label for="usuario">Usuario:</label><br>
+                                        <input type="text" name="usuario" id="usuario" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Correo:</label><br>
+                                        <input type="email" name="correo" id="correo" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contrasena">Contraseña:</label><br>
+                                        <input type="password" name="contrasena" id="contrasena" class="form-control" required>
                                     </div>
                                     <div class="form-group pt-1 text-center">
-                                        <input type="submit" name="submit" class="btn btn-info btn-md" value="Enviar">
+                                        <input type="submit" name="submit" class="btn btn-info btn-md" value="Enviar" required>
                                     </div>
                                     <div class="form-group">
                                         <div id="register-link" class="text-right">
-                                            <a href="registro.html" class="text-info">Regístrese</a>
+                                            <a href="login.php" class="text-info">Iniciar Sesión</a>
                                         </div>
                                     </div>
                                 </form>

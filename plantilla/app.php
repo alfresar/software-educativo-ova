@@ -1,3 +1,13 @@
+<?php 
+if (!isset($_SESSION)) {
+  session_start(); 
+  
+   require('sesion.php');
+      
+  if ($c > 0) {
+      $id_usuario= $_SESSION['id_usuario']; 
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -32,7 +42,7 @@
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="index.html">Salir</a></li>
+                    <li><a class="dropdown-item" href="cerrar_sesion.php">Salir</a></li>
                 </ul>
             </li>
         </ul>
@@ -42,11 +52,11 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <a class="nav-link active" href="app.html">
+                        <a class="nav-link active" href="app.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-house"></i></div>
                             Inicio
                         </a>
-                        <a class="nav-link" href="progreso.html">
+                        <a class="nav-link" href="progreso.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Progreso
                         </a>
@@ -59,12 +69,7 @@
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="capitulo.html?cap=1">Capitulo 1</a>
-                                <a class="nav-link" href="capitulo.html?cap=2">Capitulo 2</a>
-                                <a class="nav-link" href="capitulo.html?cap=3">Capitulo 3</a>
-                                <a class="nav-link" href="capitulo.html?cap=4">Capitulo 4</a>
-                                <a class="nav-link" href="capitulo.html?cap=5">Capitulo 5</a>
-                                <a class="nav-link" href="capitulo.html?cap=6">Capitulo 6</a>
+                                <?php require("navegar.php"); ?>
                             </nav>
                         </div>
                     </div>
@@ -78,6 +83,12 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             Mis datos personales.
+
+                    <?php require('conexion/conectar.php');
+                    $consulta2 = "SELECT * FROM usuarios where id_usuario='$id_usuario' ORDER BY nombres ASC"; 
+                    $query2 = mysqli_query($conection,$consulta2) or die (mysqli_error($conection));
+                      $c=1; 
+                    while ($row=mysqli_fetch_array($query2)) {  ?>        
                         </div>
                         <div class="card-footer">
                             <div class="row">
@@ -85,7 +96,7 @@
                                     <div class="form-group row">
                                         <label class="col-sm-3 col-form-label">Nombres</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" value="<?= $row['nombres'] ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -93,7 +104,7 @@
                                     <div class="form-group row">
                                         <label class="col-sm-3 col-form-label">Usuario</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" value="<?= $row['usuario']; ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -103,7 +114,8 @@
                                     <div class="form-group row">
                                         <label class="col-sm-3 col-form-label">Correo</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" value="<?= $row['correo']; ?>">
+                                         <?php } ?>   
                                         </div>
                                     </div>
                                 </div>
@@ -127,3 +139,16 @@
 </body>
 
 </html>
+
+<?php  }
+
+  else{
+  
+header('location:login.php');
+
+  }
+      
+}
+
+
+?>  

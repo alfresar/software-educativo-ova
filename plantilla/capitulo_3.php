@@ -1,3 +1,12 @@
+<?php 
+if (!isset($_SESSION)) {
+  session_start(); 
+  
+   require('sesion.php');
+      
+  if ($c > 0) {
+      $id_usuario= $_SESSION['id_usuario']; 
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -28,7 +37,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="index.html">Salir</a></li>
+                        <li><a class="dropdown-item" href="cerrar_sesion.php">Salir</a></li>
                     </ul>
                 </li>
             </ul>
@@ -38,11 +47,11 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <a class="nav-link" href="app.html">
+                            <a class="nav-link" href="app.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-house"></i></div>
                                 Inicio
                             </a>
-                            <a class="nav-link active" href="progreso.html">
+                            <a class="nav-link active" href="progreso.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Progreso
                             </a>
@@ -53,12 +62,7 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="capitulo.html?cap=1">Capitulo 1</a>
-                                    <a class="nav-link" href="capitulo.html?cap=2">Capitulo 2</a>
-                                    <a class="nav-link" href="capitulo.html?cap=3">Capitulo 3</a>
-                                    <a class="nav-link" href="capitulo.html?cap=4">Capitulo 4</a>
-                                    <a class="nav-link" href="capitulo.html?cap=5">Capitulo 5</a>
-                                    <a class="nav-link" href="capitulo.html?cap=6">Capitulo 6</a>
+                                    <?php require("navegar.php"); ?>
                                 </nav>
                             </div>
                         </div>
@@ -68,58 +72,61 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Mi progreso</h1>
+                        <h1 class="mt-4">Capitulo #3 Diseño del Software Educativo</h1>
                         <div class="card mb-4">
                             <div class="card-body">
-                                A continuación podrá visualizar las actividades que tiene asignadas.
+                                A continuación podrá visualizar el contenido del capitulo.
                             </div>
-                        </div>
-                        <div class="row">
+                        </div>    
+                            <div class="row">
                             <div class="col-md-4">
                                 <div class="card mb-4">
-                                    <div class="card-body">Actividad #1</div>
+                                    <div class="card-body">Concepto</div>
                                     <div class="card-footer">
-                                        <p>Tema: {Nombre del Tema}</p>
-                                        <p>Tipo: {Tipo de Actividad}</p>
-                                        <p>Realizado: Si/No</p>
-                                        <p>Fecha: {Fecha}</p>
+                                        <p>En el diseño del software educativo se deben tener definidos los objetivos de aprendizaje, la estructura del contenido, las actividades de formación, los recursos complementarios, la evaluación para el usuario, etc.</p>
+
+                                        <p>La calidad es otro aspecto importante que el docente tiene que tomar en cuenta al momento de elaborar sus materiales didácticos. La calidad implica: saber manejar la información que está a su alcance, adecuarla a sus necesidades, a las necesidades de sus alumnos y saberla comunicar. Con ello el docente intentará desencadenar procesos de aprendizaje en los alumnos, mediante su dominio de la hipermedia (palabras, imágenes y sonidos) como una nueva y necesaria forma de expresión, así como la adquisición de conocimiento, que se desarrolla en los diferentes equipos de investigación sobre la materia de interés, las nuevas tecnologías de la información y los nuevos métodos pedagógicos (Duart y Sangrá, 2000).</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="card mb-4">
-                                    <div class="card-body">Actividad #2</div>
+                                    <div class="card-body">Mas Datos...</div>
                                     <div class="card-footer">
-                                        <p>Tema: {Nombre del Tema}</p>
-                                        <p>Tipo: {Tipo de Actividad}</p>
-                                        <p>Realizado: Si/No</p>
-                                        <p>Fecha: {Fecha}</p>
+                                       <p>Este software educativo, se diseña con base en una metodología fundamentada por la ingeniería del software que permite su desarrollo como apoyo didáctico a los programas de estudio de educación básica, media y de estudios superiores. Se determinó una necesidad, que consistió en la falta de un software educativo que sirviera de apoyo para un área de estudio, como es la Contabilidad Financiera en el Ámbito Educativo. Para el análisis y delimitación del tema, se respondió a las preguntas ¿Que se va a hacer? ¿Cuánto se abordará de contenido? Se establecieron objetivos de estudio.</p>
+
+                                       <p>Se definió al usuario, mediante el establecimiento de su perfil y nivel escolar. Se seleccionó y estructuró el contenido temático, basándose en el programa didáctico escolarizado. Mediante el trabajo conjunto con profesores, pedagogos, psicólogos, redactores, se crearon módulos de aprendizaje y se seleccionó el tipo de software educativo a desarrollar (tutorial, ejercitador, juego). Se diseñaron las interfaces, acordes al medio ambiente que necesita el alumno y se definieron las estructuras de evaluación (Peláez y López, 2006).
+</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="card mb-4">
-                                    <div class="card-body">Actividad #3</div>
+                                    <div class="card-body">Material Extra</div>
                                     <div class="card-footer">
-                                        <p>Tema: {Nombre del Tema}</p>
-                                        <p>Tipo: {Tipo de Actividad}</p>
-                                        <p>Realizado: Si/No</p>
-                                        <p>Fecha: {Fecha}</p>
+                                        <p>En los siguientes videos, encontrará la introduccion al diseño de software y los pasos de como deberiamois hacerlo.</p>
+                                        <p><link rel="stylesheet" type="text/css" href="">
+                                            <a target="_blank" href="https://www.youtube.com/watch?v=az2mP_AVgV0">Diseño de software educativo</a>
+                                        </p>
+                                        <p><a target="_blank" href="https://www.youtube.com/watch?v=tKJeEXwZ1QA&ab_channel=CatchExceptionCanal">Introducción al diseño de softwareo</a></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="card mb-4">
-                                    <div class="card-body">Actividad #4</div>
+                                    <div class="card-body">Actividad</div>
                                     <div class="card-footer">
-                                        <p>Tema: {Nombre del Tema}</p>
-                                        <p>Tipo: {Tipo de Actividad}</p>
-                                        <p>Realizado: Si/No</p>
-                                        <p>Fecha: {Fecha}</p>
+                                        <p>Tema: Diseño del Software Educativo</p>
+                                        <p>Tipo: Sopa de Letras</p>
+                                        <p>Indicaciones: Buscar las palabras.</p>
+                                        <p>Link de Acceso: <a target="_blank" href="https://es.educaplay.com/recursos-educativos/12399100-caracteristicas_de_diseno.html">Sopa de letras</a></p>
+                                        <p>Fecha Inicio: 13/07/2022</p>
+                                        <p>Fecha Fin: 15/07/2022</p>
+                                        <p>Tiempo: 15 minutos</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                    
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -135,3 +142,15 @@
         <script src="js/scripts_app.js"></script>
     </body>
 </html>
+<?php  }
+
+  else{
+  
+header('location:login.php');
+
+  }
+      
+}
+
+
+?>  
