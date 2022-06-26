@@ -33,7 +33,7 @@ var answers2=["MU9iamV0aXZv","MUNvbnRlbmlkbw==","MUFjdGl2aWRhZGVzIGRlIGFwcmVuZGl
 var answers3=["MVJldXRpbGl6YWJsZXM=","MUNvbXBhdGlibGVz","MUVzdHJ1Y3R1cmFkb3M=","MUF0ZW1wb3JhbGVz","MFJhcGlkb3M=","MFNvbG8gcGFyYSBlbnRvcm5vcyBXRUI=","MFNvbG8gcGFyYSBNb3ZpbGVz"];
 var answers4=["MVZpZGVvcw==","MUp1ZWdvcw==","MURpYWdyYW1hcw==","MUF1ZGlvcw==","MUltYWdlbmVz","MFRleHRvcyBFeHRlbnNvcw==","MENvbXBhcyBlbiBMaW5lYQ=="];
 var ans=[answers1,answers2,answers3,answers4];
-var err=["Las letras OVA, significan Objeto Virtual de Aprendizaje","La estructura general de los OVA contiene un objetivo, un contenido, una actividad de aprendizaje y","Los Ovas son, Reutilizables, Compatibles, Estructurados y Atemporales.",""];
+var err=["Las letras OVA, significan Objeto Virtual de Aprendizaje","La estructura general de los OVA contiene un objetivo, un contenido, una actividad de aprendizaje y","Los Ovas son, Reutilizables, Compatibles, Estructurados y Atemporales.","Un Ova contiene: Videos, Juegos, Diagramas, Audios e Imagenes"];
 var ima=["","","",""];
 var mp4=["","","",""];
 var ogv=["","","",""];

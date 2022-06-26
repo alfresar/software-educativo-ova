@@ -51,18 +51,23 @@ if (!isset($_SESSION)) {
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-house"></i></div>
                                 Inicio
                             </a>
-                            <a class="nav-link active" href="progreso.php">
+                            <a class="nav-link" href="progreso.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Progreso
                             </a>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link active collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-book-open"></i></div>
                                 OVA
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse show" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <?php require("navegar.php"); ?>
+                                    <a class="nav-link active" href="capitulo_1.php">Capitulo 1</a>
+                                    <a class="nav-link" href="capitulo_2.php">Capitulo 2</a>
+                                    <a class="nav-link" href="capitulo_3.php">Capitulo 3</a>
+                                    <a class="nav-link" href="capitulo_4.php">Capitulo 4</a>
+                                    <a class="nav-link" href="capitulo_5.php">Capitulo 5</a>
+                                    <a class="nav-link" href="capitulo_6.php">Capitulo 6</a>
                                 </nav>
                             </div>
                         </div>
@@ -119,9 +124,7 @@ if (!isset($_SESSION)) {
                                         <p>Tema: Introducción a software educativo</p>
                                         <p>Tipo: Completar</p>
                                         <p>Indicaciones: Completar con las palabras mostradas las frases que apareceran</p>
-                                        <p>Link de Acceso: <a target="_blank" href="#">Completar</a></p>
-                                        <p>Fecha Inicio: 04/07/2022</p>
-                                        <p>Fecha Fin: 06/07/2022</p>
+                                        <p>Link de Acceso: <a href="#" data-toggle="modal" data-target="#exampleModalLong">Introducción a software educativo</a></p>
                                         <p>Tiempo: 15 minutos</p>
                                     </div>
                                 </div>
@@ -138,7 +141,28 @@ if (!isset($_SESSION)) {
                 </footer>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class=" modal-lg modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Actividad - Introducción a software educativo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="../capitulo1/introduccion.htm" width="100%" height="450" style="border:1px solid black;"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
         <script src="js/scripts_app.js"></script>
     </body>
 </html>

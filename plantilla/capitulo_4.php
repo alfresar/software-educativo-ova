@@ -51,18 +51,23 @@ if (!isset($_SESSION)) {
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-house"></i></div>
                                 Inicio
                             </a>
-                            <a class="nav-link active" href="progreso.php">
+                            <a class="nav-link" href="progreso.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Progreso
                             </a>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link active collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-book-open"></i></div>
                                 OVA
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <div class="collapse show" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <?php require("navegar.php"); ?>
+                                    <a class="nav-link" href="capitulo_1.php">Capitulo 1</a>
+                                    <a class="nav-link" href="capitulo_2.php">Capitulo 2</a>
+                                    <a class="nav-link" href="capitulo_3.php">Capitulo 3</a>
+                                    <a class="nav-link active" href="capitulo_4.php">Capitulo 4</a>
+                                    <a class="nav-link" href="capitulo_5.php">Capitulo 5</a>
+                                    <a class="nav-link" href="capitulo_6.php">Capitulo 6</a>
                                 </nav>
                             </div>
                         </div>
