@@ -132,9 +132,7 @@ if (!isset($_SESSION)) {
                                         <p>Tema: Características de un software educativo</p>
                                         <p>Tipo: Crucigrama</p>
                                         <p>Indicaciones: Digitar las palabras segun el concepto.</p>
-                                        <p>Link de Acceso: <a target="_blank" href="#">Crucigrama</a></p>
-                                        <p>Fecha Inicio: 18/07/2022</p>
-                                        <p>Fecha Fin: 20/07/2022</p>
+                                        <p>Link de Acceso: <a href="#" data-toggle="modal" data-target="#exampleModalLong">Características de un software educativo</a></p>
                                         <p>Tiempo: 35 minutos</p>
                                     </div>
                                 </div>
@@ -151,7 +149,28 @@ if (!isset($_SESSION)) {
                 </footer>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class=" modal-lg modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Actividad - Características de un software educativo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="../capitulo4/caracteristicas.htm" width="100%" height="450" style="border:1px solid black;"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
         <script src="js/scripts_app.js"></script>
     </body>
 </html>
